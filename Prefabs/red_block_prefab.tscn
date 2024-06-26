@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmy2hy0jwu4gi"]
+
+[ext_resource type="Script" path="res://Scripts/Block.cs" id="1_3rjk7"]
+[ext_resource type="Texture2D" uid="uid://c100vulb4if0m" path="res://Textures/redBlock.png" id="1_pigic"]
+
+[node name="RedBlockPrefab" type="Node2D"]
+script = ExtResource("1_3rjk7")
+color = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pigic")

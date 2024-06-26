@@ -1,0 +1,34 @@
+[gd_scene load_steps=11 format=3 uid="uid://cnysx1mcy752x"]
+
+[ext_resource type="Script" path="res://Scripts/GameManager.cs" id="1_0fsvy"]
+[ext_resource type="Script" path="res://Scripts/Field.cs" id="2_nq11r"]
+[ext_resource type="PackedScene" uid="uid://bo61afv0srxfx" path="res://Prefabs/cursor.tscn" id="3_5di2g"]
+[ext_resource type="PackedScene" uid="uid://rsw1gdt6hkxg" path="res://Prefabs/block_row_prefab.tscn" id="4_ffohh"]
+[ext_resource type="PackedScene" uid="uid://b5o1l1wmuk8jt" path="res://Prefabs/empty_block_prefab.tscn" id="5_iog8o"]
+[ext_resource type="PackedScene" uid="uid://cmy2hy0jwu4gi" path="res://Prefabs/red_block_prefab.tscn" id="6_nj7df"]
+[ext_resource type="PackedScene" uid="uid://gmyel7twqssx" path="res://Prefabs/blue_block_prefab.tscn" id="7_alk1a"]
+[ext_resource type="PackedScene" uid="uid://cti4t22f1jgf" path="res://Prefabs/green_block_prefab.tscn" id="8_dbmdp"]
+[ext_resource type="PackedScene" uid="uid://buw7l8nxljyf1" path="res://Prefabs/yellow_block_prefab.tscn" id="9_uv15x"]
+[ext_resource type="PackedScene" uid="uid://cv0answhl8jfm" path="res://Prefabs/purple_block_prefab.tscn" id="10_cp57t"]
+
+[node name="Root" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="GameManager" type="Node2D" parent="." node_paths=PackedStringArray("playingField")]
+script = ExtResource("1_0fsvy")
+playingField = NodePath("../Field")
+
+[node name="Field" type="Node2D" parent="."]
+script = ExtResource("2_nq11r")
+height = 14
+width = 6
+cursorPrefab = ExtResource("3_5di2g")
+blockRowPrefab = ExtResource("4_ffohh")
+emptyBlockPrefab = ExtResource("5_iog8o")
+redBlockPrefab = ExtResource("6_nj7df")
+blueBlockPrefab = ExtResource("7_alk1a")
+greenBlockPrefab = ExtResource("8_dbmdp")
+yellowBlockPrefab = ExtResource("9_uv15x")
+purpleBlockPrefab = ExtResource("10_cp57t")

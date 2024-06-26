@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://gmyel7twqssx"]
+
+[ext_resource type="Script" path="res://Scripts/Block.cs" id="1_o0fhd"]
+[ext_resource type="Texture2D" uid="uid://urwi70k6kr8c" path="res://Textures/blueBlock.png" id="1_u53b6"]
+
+[node name="BlueBlockPrefab" type="Node2D"]
+script = ExtResource("1_o0fhd")
+color = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u53b6")

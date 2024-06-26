@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Ketris"
-config/features=PackedStringArray("4.2", "Forward Plus")
+run/main_scene="res://Scenes/Ingame.tscn"
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Ketris"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
